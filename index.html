@@ -9,7 +9,7 @@
     <link href="./styles/global.css" rel="stylesheet" />
     <link href="./styles/style.css" rel="stylesheet" />
   </head>
-  <body class="not-responsive-static-layout">
+  <body>
     <header class="header">
       <nav class="header__menu">
         <ul class="header__links-list">
@@ -24,7 +24,7 @@
           </li>
         </ul>
       </nav>
-      <a class="header__logo" aria-label="Оно тебе надо главная">
+      <a class="header__logo">
         <img
           class="header__logo-image"
           src="./images/logo-black.svg"
@@ -33,41 +33,31 @@
           height="150"
         />
       </a>
-      <address class="header__address address">
-        <a class="no-wrap header__address-link" href="tel:+99995555555">
-          +9 999 555 5555
-        </a>
-        <br />
-        <a class="no-wrap header__address-link" href="mailto:info@sobaka.ge">
-          info@sobaka.ge
-        </a>
-        <p>наб. Принсенграхт 263-265, Амстердам</p>
+      <address class="address header__address">
+        <a class="address__item" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="address__item" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p class="address__address-text">
+          наб. Принсенграхт 263-265, Амстердам
+        </p>
       </address>
     </header>
+
     <main>
       <section class="cover">
         <div class="overlay"></div>
         <h1 class="cover__title">
-          <span class="aligned-text">
-            о<span class="letter-spacing-extended">но</span>
-          </span>
-          <span class="aligned-text_center">
-            те<span class="letter-spacing-extended">бе</span>
-          </span>
-          <span class="aligned-text_right">
-            <span class="letter-spacing-extended">н</span>aд<span
-              class="no-letter-spacing"
-              >о</span
-            >
-          </span>
+          <span class="aligned-text aligned-text_left">оно</span>
+          <span class="aligned-text aligned-text_center">тебе</span>
+          <span class="aligned-text aligned-text_right">надо</span>
         </h1>
         <div class="cover__description">
           <p class="cover__description-text">
             Аукцион вещей, в которые никто не верил
           </p>
-          <button class="bet-button" type="button">Сделать ставку</button>
+          <a class="bet-button" href="#">Сделать ставку</a>
         </div>
       </section>
+
       <section class="lots">
         <h2 class="lots__heading">Лоты</h2>
         <ul class="lots__card-list">
@@ -123,6 +113,7 @@
         </ul>
         <a class="lots__look-more-link" href="#">посмотреть больше</a>
       </section>
+
       <section class="about">
         <div class="about__logo">
           <img
@@ -153,16 +144,14 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
-      <address class="address">
-        <a class="no-wrap footer__address-link" href="tel:+99995555555">
-          +9 999 555 5555
-        </a>
-        <br />
-        <a class="no-wrap footer__address-link" href="mailto:info@sobaka.ge">
-          info@sobaka.ge
-        </a>
-        <p>наб. Принсенграхт 263-265, Амстердам</p>
+      <address class="address footer__address">
+        <a class="address__item" href="tel:+99995555555">+9 999 555 5555</a>
+        <a class="address__item" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <p class="address__address-text">
+          наб. Принсенграхт 263-265, Амстердам
+        </p>
       </address>
       <nav class="footer__menu">
         <ul class="footer__menu-list">
