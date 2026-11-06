@@ -23,7 +23,7 @@ main {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px 96px;
+  padding: 92px 50px 89px;
 }
 
 .header__menu {
@@ -310,7 +310,7 @@ main {
 
 .about__title {
   margin: 0;
-  padding: 100px 0 100px;
+  padding: 100px 0 104px;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
@@ -380,4 +380,162 @@ main {
   display: block;
   width: auto;
   height: 48px;
+}
+
+/* ============ Адаптив ============ */
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 40px 24px;
+  }
+
+  .cover {
+    padding: 80px 24px 40px;
+  }
+
+  .cover__title {
+    font-size: 64px;
+    letter-spacing: 16px;
+  }
+
+  .cover__description {
+    padding-top: 80px;
+    gap: 32px;
+  }
+
+  .lots {
+    padding: 80px 24px 0;
+  }
+
+  .lots__heading {
+    margin-left: 0;
+  }
+
+  .lots__card-list {
+    column-gap: 16px;
+  }
+
+  .lots__look-more-link {
+    margin-left: 0;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    padding: 80px 24px 0;
+  }
+
+  .about__logo {
+    justify-self: start;
+  }
+
+  .about__title {
+    padding: 0 0 24px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 32px;
+    padding: 80px 24px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    justify-items: start;
+  }
+
+  .header__logo {
+    justify-self: start;
+  }
+
+  .header__address {
+    justify-self: start;
+    max-width: none;
+  }
+
+  .header__links-list {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .cover {
+    padding: 48px 16px 24px;
+  }
+
+  .cover__title {
+    font-size: 36px;
+    letter-spacing: 6px;
+    gap: 8px;
+  }
+
+  .cover__description {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    gap: 24px;
+  }
+
+  .cover__description-text {
+    font-size: 16px;
+    word-spacing: 6px;
+  }
+
+  .bet-button {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+
+  .lots {
+    padding: 48px 16px 0;
+  }
+
+  .lots__heading {
+    font-size: 28px;
+  }
+
+  .lots__card-list {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__text {
+    font-size: 16px;
+  }
+
+  .about {
+    padding: 48px 16px 0;
+  }
+
+  .about__logo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about__logo-image {
+    width: 96px;
+  }
+
+  .about__title {
+    font-size: 28px;
+    padding-bottom: 16px;
+  }
+
+  .about__text p {
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 48px 16px 24px;
+  }
 }
