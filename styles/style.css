@@ -32,17 +32,23 @@ main {
 
 .header__links-list {
   display: flex;
-  gap: 32px;
-  list-style: circle;
+  gap: 30px;
+  list-style: none;
 }
 
 .header__links-list-item {
-  margin-left: 14px;
+  position: relative;
 }
 
-.header__links-list-item_no-bullit {
-  list-style: none;
-  margin-left: 0;
+/* Точки между пунктами меню, как в макете */
+.header__links-list-item:not(.header__links-list-item_no-bullit)::before {
+  content: "◦";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #000;
 }
 
 .header__link {
@@ -67,7 +73,7 @@ main {
   display: block;
   justify-self: center;
   align-self: center;
-  width: 140px;
+  width: 136px;
 }
 
 .header__logo-image {
@@ -103,7 +109,7 @@ main {
 
 .header__address {
   justify-self: end;
-  max-width: 240px;
+  max-width: 220px; /* Чтобы "Амстердам" переносилось на новую строку, как в макете */
 }
 
 /* ============ Cover ============ */
@@ -127,13 +133,13 @@ main {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   margin: 0;
   color: #fff;
   font-weight: bold;
   font-size: 100px;
   line-height: 1.15;
-  letter-spacing: 30px;
+  letter-spacing: 45px; /* Увеличили для соответствия макету */
   text-transform: uppercase;
 }
 
@@ -143,14 +149,17 @@ main {
 
 .aligned-text_left {
   text-align: left;
+  margin-right: -45px; /* Убираем лишний отступ у последней буквы */
 }
 
 .aligned-text_center {
   text-align: center;
+  margin-right: -45px;
 }
 
 .aligned-text_right {
   text-align: right;
+  margin-right: 0; /* Для правого выравнивания отступ не нужен */
 }
 
 .cover__description {
@@ -199,7 +208,7 @@ main {
 }
 
 .lots__heading {
-  margin: 0 0 30px 40px;
+  margin: 0 0 30px 0;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
@@ -271,12 +280,13 @@ main {
 .card__text {
   font-size: 20px;
   line-height: 1.2;
+  margin-top: auto; /* Прижимаем текст к низу карточки */
 }
 
 .lots__look-more-link {
   display: block;
   width: fit-content;
-  margin: 30px 0 0 40px;
+  margin: 30px 0 0 0;
   font-size: 20px;
   line-height: 1.2;
   text-decoration: underline;
@@ -310,7 +320,7 @@ main {
 
 .about__title {
   margin: 0;
-  padding: 100px 0 104px;
+  padding: 0 0 24px; /* Убрали верхний отступ, чтобы заголовок был на уровне логотипа */
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
@@ -332,14 +342,18 @@ main {
 /* ============ Footer ============ */
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: flex-start;
   padding: 180px 50px 80px;
 }
 
 .footer__address {
-  max-width: 240px;
+  justify-self: start;
+}
+
+.footer__menu {
+  justify-self: center;
 }
 
 .footer__menu-list {
@@ -365,6 +379,7 @@ main {
 }
 
 .footer__social-list {
+  justify-self: end;
   display: flex;
   gap: 48px;
   margin: 0;
